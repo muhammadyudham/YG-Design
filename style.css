@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Menggunakan Arial atau sans-serif default */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0d0000; /* Warna latar belakang sangat gelap, mendekati hitam */
-    color: #ffffff; /* Warna teks default putih */
+    background-color: #0d0000;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -18,8 +18,8 @@ body {
 
 /* Header/Navbar */
 .navbar {
-    background-color: #580c0c; /* Merah marun gelap */
-    padding: 2px 0;
+    background-color: #580c0c;
+    padding: 0px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -30,10 +30,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
 .navbar .logo img {
-    height: 90px; /* Sesuaikan ukuran logo */
+    height: 70px;
 }
 
 .navbar nav ul {
@@ -45,7 +46,7 @@ body {
 }
 
 .navbar nav ul li {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .navbar nav ul li a {
@@ -53,36 +54,70 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-    padding: 5px 0; /* Memberi sedikit padding untuk area klik */
+    padding: 5px 0;
+    font-size: 0.95em;
 }
 
 .navbar nav ul li a:hover {
-    color: #007bff; /* Warna biru saat hover */
+    color: #007bff;
 }
 
 .navbar nav ul li .contact-us-btn {
-    background-color: #007bff; /* Warna biru untuk tombol CONTACT US */
-    padding: 8px 15px;
+    background-color: #007bff;
+    padding: 6px 12px;
     border-radius: 5px;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 0.9em;
-    border: none; /* Hilangkan border default anchor */
-    display: inline-block; /* Agar padding dan border-radius bekerja */
+    font-size: 0.85em;
+    border: none;
+    display: inline-block;
 }
 
 .navbar nav ul li .contact-us-btn:hover {
-    background-color: #0056b3; /* Biru lebih gelap saat hover */
+    background-color: #0056b3;
     color: #ffffff;
 }
 
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Sembunyikan secara default untuk desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animasi Hamburger ke X */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Bar tengah menghilang */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg); /* Bar atas berputar dan geser */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg); /* Bar bawah berputar dan geser */
+}
+
+
 /* Hero Section (Selamat Datang) */
 .hero {
-    background-color: #0a1f44; /* Biru gelap untuk hero section */
+    background-color: #0a1f44;
     color: #ffffff;
     text-align: center;
-    padding: 80px 20px 60px; /* Atur padding bawah sedikit lebih kecil */
-    /* background-image: url('images/bg_pattern.png'); /* Hapus atau ganti jika tidak ada pola latar belakang */
+    padding: 80px 20px 60px;
     background-size: cover;
     background-position: center;
 }
@@ -92,12 +127,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px; /* Batasi lebar konten untuk penataan */
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 3.5em; /* Ukuran lebih besar */
+    font-size: 3.5em;
     margin-bottom: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -105,37 +140,37 @@ body {
 }
 
 .hero-logo-large {
-    max-width: 350px; /* Ukuran logo besar di tengah */
+    max-width: 350px;
     height: auto;
-    margin-bottom: 40px; /* Jarak dari teks di bawahnya */
+    margin-bottom: 40px;
 }
 
 .hero .tagline {
-    font-size: 1.6em; /* Lebih besar */
+    font-size: 1.6em;
     font-weight: bold;
-    margin-bottom: 15px; /* Kurangi jarak */
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 1.05em; /* Sedikit lebih besar */
+    font-size: 1.05em;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
-    padding: 0 20px; /* Sedikit padding samping untuk teks */
+    padding: 0 20px;
 }
 
 /* Info Section */
 .info-section {
-    background-color: #0d285a; /* Biru sedikit lebih gelap untuk info section */
-    padding: 80px 0; /* Padding lebih besar */
+    background-color: #0d285a;
+    padding: 80px 0;
     color: #ffffff;
 }
 
 .info-section .container {
     display: flex;
     align-items: center;
-    gap: 60px; /* Jarak antar elemen lebih besar */
+    gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -144,35 +179,35 @@ body {
     display: flex;
     align-items: center;
     gap: 60px;
-    flex-wrap: wrap-reverse; /* Ilustrasi di kanan, teks di kiri. flex-wrap-reverse untuk order di mobile */
+    flex-wrap: wrap-reverse;
     justify-content: center;
 }
 
 .info-text {
     flex: 1;
-    min-width: 350px; /* Lebar minimum sebelum wrap */
-    max-width: 550px; /* Batasi lebar teks */
-    text-align: left; /* Teks rata kiri */
+    min-width: 350px;
+    max-width: 550px;
+    text-align: left;
 }
 
 .info-text h2 {
-    font-size: 2.8em; /* Ukuran judul lebih besar */
-    color: #ffffff; /* Ubah warna judul menjadi putih agar kontras dengan biru */
-    margin-bottom: 25px; /* Jarak lebih besar */
+    font-size: 2.8em;
+    color: #ffffff;
+    margin-bottom: 25px;
     line-height: 1.2;
     font-weight: bold;
 }
 
 .info-text p {
-    font-size: 1.15em; /* Sedikit lebih besar */
+    font-size: 1.15em;
     line-height: 1.7;
     margin-bottom: 0;
 }
 
 .info-image {
     flex: 1;
-    min-width: 300px; /* Lebar minimum sebelum wrap */
-    max-width: 500px; /* Batasi lebar gambar */
+    min-width: 300px;
+    max-width: 500px;
     text-align: center;
 }
 
@@ -185,7 +220,7 @@ body {
 
 /* Product Section */
 .product-section {
-    background-color: #123472; /* Biru yang sedikit lebih terang untuk produk section */
+    background-color: #123472;
     padding: 80px 0;
     text-align: center;
     color: #ffffff;
@@ -204,9 +239,9 @@ body {
 .product-section h2::after {
     content: '';
     display: block;
-    width: 60%; /* Lebar garis bawah lebih pendek */
+    width: 60%;
     height: 4px;
-    background-color: #ffffff; /* Ubah garis bawah menjadi putih */
+    background-color: #ffffff;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -219,12 +254,12 @@ body {
 }
 
 .product-item {
-    background-color: #1a428a; /* Biru yang lebih gelap untuk item produk */
+    background-color: #1a428a;
     border-radius: 10px;
-    padding: 20px; /* Padding di sekitar gambar dan teks */
+    padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    display: flex; /* Untuk menengahkan konten item */
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -237,74 +272,156 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 15px; /* Jarak antara gambar dan teks */
+    margin-bottom: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-item p {
     font-size: 1.3em;
     font-weight: bold;
-    color: #ffffff; /* Ubah warna nama produk menjadi putih */
+    color: #ffffff;
     margin: 0;
     text-transform: uppercase;
 }
 
+/* New CTA Button for Product Section */
+.product-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+
 /* Footer */
 .footer {
-    background-color: #580c0c; /* Merah marun gelap, sama dengan navbar */
-    padding: 2px 0;
+    background-color: #580c0c;
+    padding: 0px 0;
     color: #ffffff;
+    text-align: center;
 }
 
 .footer .container {
     flex-wrap: wrap;
+    padding-bottom: 10px;
 }
 
 .footer-content {
-    display: flex; /* Aktifkan Flexbox */
+    display: flex;
     width: 100%;
-    justify-content: space-between; /* Ini yang akan membuat logo di kiri dan info di kanan */
-    align-items: center; /* Sejajarkan secara vertikal di tengah */
-    flex-wrap: wrap; /* Agar responsif di layar kecil */
-    padding: 0 10px; /* Beri sedikit padding di kiri kanan agar tidak terlalu mepet tepi container */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
 
 .footer-logo img {
-    height: 100px; /* Sesuaikan ukuran logo footer */
-    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    height: 80px;
+    display: block;
 }
 
 .contact-info {
-    text-align: right; /* Teks info kontak rata kanan */
-    max-width: 800px; /* Batasi lebar info kontak */
+    text-align: right;
+    max-width: 800px;
 }
 
 .contact-info h3 {
-    font-size: 1.5em;
-    color: #ffffff; /* Ubah warna judul kontak menjadi putih */
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .contact-info p {
     margin: 2px 0;
-    line-height: 1.5;
+    line-height: 1.4;
+    font-size: 0.9em;
 }
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 0.8em;
+    color: #cccccc;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar .container {
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: flex; /* Tampilkan hamburger menu di layar kecil */
+    }
+
+    .navbar nav {
+        display: none; /* Sembunyikan navigasi secara default */
         flex-direction: column;
-        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 90px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        background-color: #580c0c;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar nav.active {
+        display: flex; /* Tampilkan navigasi saat kelas 'active' ditambahkan */
     }
 
     .navbar nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
     }
 
     .navbar nav ul li {
-        margin: 5px 15px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar nav ul li a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .navbar nav ul li .contact-us-btn {
+        width: calc(100% - 40px);
+        margin: 10px auto;
+        display: block;
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .navbar .logo img {
+        height: 60px;
     }
 
     .hero h1 {
@@ -316,12 +433,12 @@ body {
     }
 
     .info-section .container, .info-content {
-        flex-direction: column; /* Ubah ke kolom untuk responsivitas */
+        flex-direction: column;
         text-align: center;
     }
 
     .info-text {
-        text-align: center; /* Teks di tengah di mobile */
+        text-align: center;
     }
 
     .info-image {
@@ -329,20 +446,31 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+        grid-template-columns: 1fr;
     }
 
     .footer .container,
     .footer-content {
-        flex-direction: column; /* Kembali ke kolom di layar kecil */
-        align-items: center; /* Tengahkan item */
-        text-align: center; /* Tengahkan teks */
-        gap: 20px; /* Jarak antar logo dan info di mobile */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 
     .contact-info {
-        text-align: center; /* Info kontak di tengah di layar kecil */
-        max-width: 100%; /* Lebarkan di mobile */
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2em;
+    }
+    .contact-info p {
+        font-size: 0.85em;
+    }
+
+    .copyright-text {
+        margin-top: 5px;
     }
 }
 
@@ -357,5 +485,31 @@ body {
 
     .product-section h2 {
         font-size: 2.2em;
+    }
+
+    .hero {
+        padding: 60px 15px 40px;
+    }
+
+    .hero p {
+        font-size: 0.95em;
+        padding: 0 10px;
+    }
+
+    .info-section {
+        padding: 60px 0;
+    }
+
+    .product-section {
+        padding: 60px 0;
+    }
+
+    .product-item {
+        padding: 15px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
     }
 }
